@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-/* eslint-disable @typescript-eslint/indent */
+import styled from "styled-components";
 import {
   border,
   type BorderProps,
@@ -15,7 +14,7 @@ import {
   type PositionProps,
   space,
   type SpaceProps,
-} from 'styled-system';
+} from "styled-system";
 
 type StyledDivProps = SpaceProps &
   LayoutProps &
