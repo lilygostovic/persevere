@@ -1,5 +1,5 @@
-import { StyledDiv } from "../components/common/StyledDiv";
-import { Nav } from "../components/Nav";
+import { Nav } from "../components";
+import { StyledDiv } from "../components/common";
 
 export const HomePage = () => {
   return (
