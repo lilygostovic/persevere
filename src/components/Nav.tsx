@@ -1,14 +1,11 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
-import { links } from '../data/Links';
-import { Pages } from '../types/Pages';
-import {
-  StyledDiv,
-  StyledText,
-} from './common';
+import { links } from "../data/Links";
+import { Pages } from "../types/Pages";
+import { StyledDiv, StyledText } from "./common";
 
 type NavProps = {
   active: Pages;
@@ -26,7 +23,7 @@ export const Nav = ({ active }: NavProps) => {
             textDecoration: "none",
           }}
         >
-          <StyledText variant="title">{t("Per/Severe")}</StyledText>
+          <StyledText variant="title">{t("title")}</StyledText>
         </Link>
       </StyledDiv>
       <StyledDiv display="flex" flexDirection="row">

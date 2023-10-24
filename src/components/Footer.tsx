@@ -15,13 +15,19 @@ export const Footer = () => {
       >
         <StyledDiv>
           <FooterItem
-            label={t("facebook.label")}
-            link={t("facebook.link")}
+            label={t("footer.facebook.label")}
+            link={t("footer.facebook.link")}
             pr="20px"
           />
-          <FooterItem label={t("instagram.label")} link={t("instagram.link")} />
+          <FooterItem
+            label={t("footer.instagram.label")}
+            link={t("footer.instagram.link")}
+          />
         </StyledDiv>
-        <FooterItem label={t("email.label")} link={t("email.link")} />
+        <FooterItem
+          label={t("footer.email.label")}
+          link={t("footer.email.link")}
+        />
       </StyledDiv>
     </>
   );
