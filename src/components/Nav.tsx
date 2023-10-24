@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
-import { links } from "../data/Links";
-import { StyledDiv, StyledText } from "./common";
+import { links } from '../data/Links';
+import { Pages } from '../types/Pages';
+import {
+  StyledDiv,
+  StyledText,
+} from './common';
 
-export const Nav = () => {
+type NavProps = {
+  active: Pages;
+};
+
+export const Nav = ({ active }: NavProps) => {
   const { t } = useTranslation();
 
   return (
@@ -27,6 +35,7 @@ export const Nav = () => {
             key={link.route}
             displayName={link.displayName}
             route={link.route}
+            isActive={link.route === active}
             isFirstItem={link.isFirstItem}
             isLastItem={link.isLastItem}
           />
@@ -39,6 +48,7 @@ export const Nav = () => {
 type NavItemProps = {
   displayName: string;
   route: string;
+  isActive: boolean;
   isFirstItem?: boolean;
   isLastItem?: boolean;
 };
@@ -46,6 +56,7 @@ type NavItemProps = {
 const NavItem = ({
   displayName,
   route,
+  isActive,
   isFirstItem = false,
   isLastItem = false,
 }: NavItemProps) => {
@@ -68,7 +79,7 @@ const NavItem = ({
         <StyledDiv
           height="2px"
           width="100%"
-          bg={isHovered ? "black" : "white"}
+          bg={isHovered || isActive ? "black" : "white"}
         />
         <StyledText variant="navItem">{displayName}</StyledText>
         <StyledDiv height="2px" width="100%" bg="black" />

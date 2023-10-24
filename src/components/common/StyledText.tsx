@@ -13,7 +13,7 @@ import {
   type TypographyProps,
 } from "styled-system";
 
-export type TextVariant = "title" | "navItem";
+export type TextVariant = "title" | "navItem" | "footer";
 
 type StyledTextProps = {
   variant: TextVariant;
@@ -39,6 +39,13 @@ export const StyledText = styled.text<StyledTextProps>`
           font-size: 20px;
           line-height: 32px;
           color: black;
+        `;
+      case "footer":
+        return css`
+          font-family: Helvetica, sans-serif;
+          font-size: 14px;
+          color: black;
+          line-height: 30px;
         `;
     }
   }}

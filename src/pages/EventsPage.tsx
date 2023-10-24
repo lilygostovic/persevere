@@ -4,10 +4,10 @@ import {
 } from '../components';
 import { StyledDiv } from '../components/common';
 
-export const HomePage = () => {
+export const EventsPage = () => {
   return (
     <StyledDiv px="100px">
-      <Nav active="home" />
+      <Nav active="events" />
       <Footer />
     </StyledDiv>
   );
