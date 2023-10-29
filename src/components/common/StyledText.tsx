@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 /* eslint-disable @typescript-eslint/indent */
 import {
   color,
@@ -11,7 +11,7 @@ import {
   type SpaceProps,
   typography,
   type TypographyProps,
-} from "styled-system";
+} from 'styled-system';
 
 export type TextVariant =
   | "title"
@@ -61,7 +61,7 @@ export const StyledText = styled.text<StyledTextProps>`
       case "caption":
         return css`
           font-family: "Times New Roman", Times, serif;
-          font-size: 18px;
+          font-size: 22px;
           color: lightgrey;
           line-height: 90px;
         `;
