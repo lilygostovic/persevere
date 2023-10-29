@@ -19,6 +19,8 @@ export type TextVariant =
   | "paragraphMedium"
   | "upcoming"
   | "caption"
+  | "blogCoverTitle"
+  | "blogCoverDate"
   | "footer";
 
 type StyledTextProps = {
@@ -62,8 +64,22 @@ export const StyledText = styled.text<StyledTextProps>`
         return css`
           font-family: "Times New Roman", Times, serif;
           font-size: 22px;
-          color: lightgrey;
+          color: #ababab;
           line-height: 90px;
+        `;
+      case "blogCoverTitle":
+        return css`
+          font-family: Helvetica, sans-serif;
+          font-size: 22px;
+          color: black;
+          margin-top: 20px;
+        `;
+      case "blogCoverDate":
+        return css`
+          font-family: Helvetica, sans-serif;
+          font-size: 14px;
+          color: #ababab;
+          margin-top: 10px;
         `;
       case "footer":
         return css`

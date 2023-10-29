@@ -1,11 +1,9 @@
-import { useState } from "react";
-
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import { links } from "../data/Links";
 import { Pages } from "../types/Pages";
-import { StyledDiv, StyledText } from "./common";
+import { PageButton, StyledDiv, StyledText } from "./common";
 
 const SIDE_WIDTH = "33";
 
@@ -78,7 +76,7 @@ export const Nav = ({ active }: NavProps) => {
       <StyledDiv display="flex" justifyContent="space-between">
         <StyledDiv display="flex" flexDirection="row">
           {links.map((link) => (
-            <NavItem
+            <PageButton
               key={link.route}
               displayName={link.displayName}
               route={link.route}
@@ -94,49 +92,6 @@ export const Nav = ({ active }: NavProps) => {
           <StyledDiv height="2px" width="100%" bg="black" />
         </StyledDiv>
       </StyledDiv>
-    </StyledDiv>
-  );
-};
-
-type NavItemProps = {
-  displayName: string;
-  route: string;
-  isActive: boolean;
-  isFirstItem?: boolean;
-  isLastItem?: boolean;
-};
-
-const NavItem = ({
-  displayName,
-  route,
-  isActive,
-  isFirstItem = false,
-  isLastItem = false,
-}: NavItemProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <StyledDiv
-      paddingLeft={isFirstItem ? "0px" : "12px"}
-      paddingRight={isLastItem ? "0px" : "12px"}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <Link
-        to={`/${route}`}
-        style={{
-          textDecoration: "none",
-          color: "black",
-        }}
-      >
-        <StyledDiv
-          height="2px"
-          width="100%"
-          bg={isHovered || isActive ? "black" : "white"}
-        />
-        <StyledText variant="navItem">{displayName}</StyledText>
-        <StyledDiv height="2px" width="100%" bg="black" />
-      </Link>
     </StyledDiv>
   );
 };

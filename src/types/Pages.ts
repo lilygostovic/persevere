@@ -1,7 +1,1 @@
-export type Pages =
-  | "home"
-  | "about"
-  | "charity-partners"
-  | "persevere-2022"
-  | "events"
-  | "blog";
+export type Pages = "home" | "about" | "persevere-2022" | "tickets" | "blog";

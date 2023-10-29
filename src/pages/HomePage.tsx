@@ -4,6 +4,7 @@ import {
   Footer,
   Nav,
 } from '../components';
+import { BlogPreview } from '../components/BlogPreview';
 import {
   StyledDiv,
   StyledText,
@@ -16,7 +17,7 @@ export const HomePage = () => {
   return (
     <StyledDiv px="100px">
       <Nav active="home" />
-      <StyledDiv display="flex" justifyContent="space-between">
+      <StyledDiv display="flex" justifyContent="space-between" mb="100px">
         <StyledDiv width="68%">
           <StyledDiv height="500px" width="85%" bg="black" />
           <StyledText variant="caption">
@@ -25,6 +26,7 @@ export const HomePage = () => {
         </StyledDiv>
         <EventDetails />
       </StyledDiv>
+      <BlogPreview />
       <Footer />
     </StyledDiv>
   );

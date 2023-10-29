@@ -8,20 +8,14 @@ export const links: Array<Link> = [
     isLastItem: false,
   },
   {
-    displayName: "Charity Partners",
-    route: "charity-partners",
-    isFirstItem: false,
-    isLastItem: false,
-  },
-  {
     displayName: "Persevere 2022",
     route: "persevere-2022",
     isFirstItem: false,
     isLastItem: false,
   },
   {
-    displayName: "Events (coming soon)",
-    route: "events",
+    displayName: "Tickets",
+    route: "tickets",
     isFirstItem: false,
     isLastItem: false,
   },

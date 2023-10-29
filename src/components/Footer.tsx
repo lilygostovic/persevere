@@ -10,7 +10,7 @@ export const Footer = () => {
 
   return (
     <>
-      <StyledDiv height="2px" width="100%" bg="black" mt="100px" />
+      <StyledDiv height="2px" width="100%" bg="black" mt="150px" />
       <StyledDiv display="flex" flexDirection="row">
         <FooterItem
           label={t("instagram.label")}
