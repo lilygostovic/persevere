@@ -1,17 +1,25 @@
 {
-  "title": "Per/Severe",
-  "footer": {
-    "facebook": {
-      "label": "Facebook",
-      "link": "facebook.link"
-    },
-    "instagram": {
-      "label": "Instagram",
-      "link": "https://www.instagram.com/per___severe/"
-    },
-    "email": {
-      "label": "email.label",
-      "link": "email.link"
-    }
+  "title": "Per/severe",
+  "address": {
+    "line1": "3487 Boul. Saint-Laurent",
+    "line2": "Montréal, QC H2X 2T6",
+    "line3": "Canada"
+  },
+  "instagram": {
+    "label": "Instagram",
+    "link": "https://www.instagram.com/per___severe/"
+  },
+  "email": {
+    "label": "Email",
+    "link": "mailto:perseveremtl@gmail.com"
+  },
+  "upcoming": {
+    "label": "Upcoming",
+    "date": "November 11, 2023",
+    "title": "Per/severe 2023",
+    "subtitle": " A Philanthropic Multimedia Exhibit"
+  },
+  "homepage": {
+    "imageCaption": "Artwork collaboration with __________."
   }
 }

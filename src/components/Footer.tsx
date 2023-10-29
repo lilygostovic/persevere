@@ -1,6 +1,9 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-import { StyledDiv, StyledText } from "./common";
+import {
+  StyledDiv,
+  StyledText,
+} from './common';
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -8,26 +11,13 @@ export const Footer = () => {
   return (
     <>
       <StyledDiv height="2px" width="100%" bg="black" mt="100px" />
-      <StyledDiv
-        display="flex"
-        flexDirection="row"
-        justifyContent="space-between"
-      >
-        <StyledDiv>
-          <FooterItem
-            label={t("footer.facebook.label")}
-            link={t("footer.facebook.link")}
-            pr="20px"
-          />
-          <FooterItem
-            label={t("footer.instagram.label")}
-            link={t("footer.instagram.link")}
-          />
-        </StyledDiv>
+      <StyledDiv display="flex" flexDirection="row">
         <FooterItem
-          label={t("footer.email.label")}
-          link={t("footer.email.link")}
+          label={t("instagram.label")}
+          link={t("instagram.link")}
+          pr="30px"
         />
+        <FooterItem label={t("email.label")} link={t("email.link")} />
       </StyledDiv>
     </>
   );

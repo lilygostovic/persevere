@@ -13,7 +13,13 @@ import {
   type TypographyProps,
 } from "styled-system";
 
-export type TextVariant = "title" | "navItem" | "footer";
+export type TextVariant =
+  | "title"
+  | "navItem"
+  | "paragraphMedium"
+  | "upcoming"
+  | "caption"
+  | "footer";
 
 type StyledTextProps = {
   variant: TextVariant;
@@ -28,17 +34,36 @@ export const StyledText = styled.text<StyledTextProps>`
     switch (variant) {
       case "title":
         return css`
-          font-family: Helvetica;
+          font-family: "Times New Roman", Times, serif;
           font-size: 45px;
-          font-weight: lighter;
           color: black;
         `;
       case "navItem":
         return css`
           font-family: Helvetica, sans-serif;
-          font-size: 20px;
+          font-size: 16px;
           line-height: 32px;
           color: black;
+        `;
+      case "paragraphMedium":
+        return css`
+          font-family: Helvetica, sans-serif;
+          font-size: 16px;
+          color: black;
+        `;
+      case "upcoming":
+        return css`
+          font-family: "Times New Roman", Times, serif;
+          font-size: 20px;
+          line-height: 35px;
+          color: black;
+        `;
+      case "caption":
+        return css`
+          font-family: "Times New Roman", Times, serif;
+          font-size: 18px;
+          color: lightgrey;
+          line-height: 90px;
         `;
       case "footer":
         return css`
