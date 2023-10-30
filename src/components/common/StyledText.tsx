@@ -21,6 +21,11 @@ export type TextVariant =
   | "caption"
   | "blogCoverTitle"
   | "blogCoverDate"
+  | "blogPostTitle"
+  | "blogPostSubtitle"
+  | "blogPostDetails"
+  | "blogPostDetails"
+  | "blogPostBody"
   | "footer";
 
 type StyledTextProps = {
@@ -80,6 +85,34 @@ export const StyledText = styled.text<StyledTextProps>`
           font-size: 14px;
           color: #ababab;
           margin-top: 10px;
+        `;
+      case "blogPostTitle":
+        return css`
+          font-family: "Times New Roman", Times, serif;
+          font-size: 55px;
+          color: black;
+          line-height: 70px;
+        `;
+      case "blogPostSubtitle":
+        return css`
+          font-family: Helvetica, sans-serif;
+          font-size: 22px;
+          color: black;
+          line-height: 30px;
+        `;
+      case "blogPostDetails":
+        return css`
+          font-family: Helvetica, sans-serif;
+          font-size: 14px;
+          color: black;
+          line-height: 30px;
+        `;
+      case "blogPostBody":
+        return css`
+          font-family: "Times New Roman", Times, serif;
+          font-size: 18px;
+          color: black;
+          line-height: 30px;
         `;
       case "footer":
         return css`

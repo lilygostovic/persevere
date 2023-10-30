@@ -1,6 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import { Route, Routes } from "react-router-dom";
+import {
+  Route,
+  Routes,
+} from 'react-router-dom';
 
 import {
   AboutPage,
@@ -8,7 +11,8 @@ import {
   HomePage,
   Persevere2022Page,
   TicketsPage,
-} from "./pages";
+} from './pages';
+import { BlogPostPage } from './pages/BlogPostPage';
 
 function App() {
   return (
@@ -18,6 +22,7 @@ function App() {
       <Route path="/persevere-2022" element={<Persevere2022Page />} />
       <Route path="/tickets" element={<TicketsPage />} />
       <Route path="/blog" element={<BlogPage />} />
+      <Route path="/blog/:id" element={<BlogPostPage />} />
     </Routes>
   );
 }

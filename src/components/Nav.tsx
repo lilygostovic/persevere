@@ -48,7 +48,7 @@ export const Nav = ({ active }: NavProps) => {
           </StyledDiv>
           <StyledDiv>
             <a
-              href={t("email.link")}
+              href={t("instagram.link")}
               rel="noreferrer"
               target="_blank"
               style={{ textDecoration: "none" }}
@@ -57,17 +57,17 @@ export const Nav = ({ active }: NavProps) => {
                 variant="paragraphMedium"
                 style={{ paddingRight: `15px` }}
               >
-                {t("email.label")}
+                {t("instagram.label")}
               </StyledText>
             </a>
             <a
-              href={t("instagram.link")}
+              href={t("email.link")}
               rel="noreferrer"
               target="_blank"
               style={{ textDecoration: "none" }}
             >
               <StyledText variant="paragraphMedium">
-                {t("instagram.label")}
+                {t("email.label")}
               </StyledText>
             </a>
           </StyledDiv>

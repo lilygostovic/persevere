@@ -8,7 +8,12 @@ import {
 export const EventDetails = () => {
   const { t } = useTranslation();
   return (
-    <StyledDiv display="flex" flexDirection="column" width="33%">
+    <StyledDiv
+      display="flex"
+      flexDirection="column"
+      width="33%"
+      marginLeft="100px"
+    >
       <StyledText variant="upcoming">{t("upcoming.date")}</StyledText>
       <StyledText variant="upcoming">{t("upcoming.title")}:</StyledText>
       <StyledText variant="upcoming">{t("upcoming.subtitle")}</StyledText>
