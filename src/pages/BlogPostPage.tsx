@@ -1,10 +1,16 @@
-import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 
-import { Footer, Nav } from "../components";
-import { StyledDiv, StyledText } from "../components/common";
-import { EventDetails } from "../components/EventDetails";
-import blogs from "../data/Blogs.json";
+import {
+  Footer,
+  Nav,
+} from '../components';
+import {
+  StyledDiv,
+  StyledText,
+} from '../components/common';
+import { EventDetails } from '../components/EventDetails';
+import blogs from '../data/Blogs.json';
 
 export const BlogPostPage = () => {
   const { t } = useTranslation();
@@ -30,14 +36,6 @@ export const BlogPostPage = () => {
             alt="blog post cover"
             style={{ objectFit: "cover", marginTop: "20px" }}
           />
-          {blogPost.subtitle && (
-            <StyledDiv>
-              <br />
-              <StyledText variant="blogPostSubtitle">
-                {blogPost.subtitle}
-              </StyledText>
-            </StyledDiv>
-          )}
           <br />
           <StyledText variant="blogPostDetails">
             {t("blogPost.authorLabel")}
