@@ -13,7 +13,7 @@ export const BlogPage = () => {
       <Nav active="blog" />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
         <StyledDiv width="68%">
-        <BlogView blogs={blogs} />
+          <BlogView blogs={blogs} />
         </StyledDiv>
         <EventDetails />
       </StyledDiv>

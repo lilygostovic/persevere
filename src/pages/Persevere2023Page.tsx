@@ -10,13 +10,13 @@ import {
   StyledText,
 } from '../components/common';
 import { EventDetails } from '../components/EventDetails';
-import artists from '../data/artists/2022.json';
+import artists from '../data/artists/2023.json';
 
 const LineBreak = styled.div`
   height: 20px;
 `;
 
-export const Persevere2022Page = () => {
+export const Persevere2023Page = () => {
   const { t } = useTranslation();
 
   return (
@@ -24,10 +24,6 @@ export const Persevere2022Page = () => {
       <Nav active="persevere-2022" />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
         <StyledDiv width="60%">
-          <StyledText variant="paragraphMedium">
-            {t("persevere2022.openingWords")}
-          </StyledText>
-          <LineBreak />
           <StyledText variant="paragraphMedium">
             {t("persevere2022.readMore")}
           </StyledText>
