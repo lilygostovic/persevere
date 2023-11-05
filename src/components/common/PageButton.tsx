@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { StyledDiv } from './StyledDiv';
-import { StyledText } from './StyledText';
+import { StyledDiv } from "./StyledDiv";
+import { StyledText } from "./StyledText";
 
 type PageButtonProps = {
   displayName: string;
@@ -11,6 +11,7 @@ type PageButtonProps = {
   isActive: boolean;
   isFirstItem?: boolean;
   isLastItem?: boolean;
+  openInNewWindow?: boolean;
 };
 
 export const PageButton = ({
@@ -19,6 +20,7 @@ export const PageButton = ({
   isActive,
   isFirstItem = false,
   isLastItem = false,
+  openInNewWindow = false,
 }: PageButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -29,21 +31,42 @@ export const PageButton = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Link
-        to={`/${route}`}
-        style={{
-          textDecoration: "none",
-          color: "black",
-        }}
-      >
-        <StyledDiv
-          height="2px"
-          width="100%"
-          bg={isHovered || isActive ? "black" : "white"}
-        />
-        <StyledText variant="navItem">{displayName}</StyledText>
-        <StyledDiv height="2px" width="100%" bg="black" />
-      </Link>
+      {!openInNewWindow && (
+        <Link
+          to={`/${route}`}
+          style={{
+            textDecoration: "none",
+            color: "black",
+          }}
+        >
+          <StyledDiv
+            height="2px"
+            width="100%"
+            bg={isHovered || isActive ? "black" : "white"}
+          />
+          <StyledText variant="navItem">{displayName}</StyledText>
+          <StyledDiv height="2px" width="100%" bg="black" />
+        </Link>
+      )}
+      {openInNewWindow && (
+        <a
+          href={`${route}`}
+          rel="noreferrer"
+          target="_blank"
+          style={{
+            textDecoration: "none",
+            color: "black",
+          }}
+        >
+          <StyledDiv
+            height="2px"
+            width="100%"
+            bg={isHovered || isActive ? "black" : "white"}
+          />
+          <StyledText variant="navItem">{displayName}</StyledText>
+          <StyledDiv height="2px" width="100%" bg="black" />
+        </a>
+      )}
     </StyledDiv>
   );
 };

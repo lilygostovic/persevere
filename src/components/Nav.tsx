@@ -1,9 +1,13 @@
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
-import { links } from "../data/Links";
-import { Pages } from "../types/Pages";
-import { PageButton, StyledDiv, StyledText } from "./common";
+import { links } from '../data/Links';
+import { Pages } from '../types/Pages';
+import {
+  PageButton,
+  StyledDiv,
+  StyledText,
+} from './common';
 
 const SIDE_WIDTH = "33";
 
@@ -83,6 +87,7 @@ export const Nav = ({ active }: NavProps) => {
               isActive={link.route === active}
               isFirstItem={link.isFirstItem}
               isLastItem={link.isLastItem}
+              openInNewWindow={link.openInNewWindow}
             />
           ))}
         </StyledDiv>

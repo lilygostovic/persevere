@@ -3,4 +3,5 @@ export type Link = {
   route: string;
   isFirstItem: boolean;
   isLastItem: boolean;
+  openInNewWindow: boolean;
 };
