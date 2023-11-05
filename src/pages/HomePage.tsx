@@ -1,21 +1,15 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-import {
-  Footer,
-  Nav,
-} from '../components';
-import { BlogView } from '../components/BlogView';
-import {
-  PageButton,
-  StyledDiv,
-  StyledText,
-} from '../components/common';
-import { EventDetails } from '../components/EventDetails';
-import blogs from '../data/Blogs.json';
+import { Footer, Nav } from "../components";
+import { BlogView } from "../components/BlogView";
+import { PageButton, StyledDiv, StyledText } from "../components/common";
+import { EventDetails } from "../components/EventDetails";
+import blogs from "../data/Blogs.json";
 
 export const HomePage = () => {
   const { t } = useTranslation();
-  const recentBlogs = blogs.slice(Math.max(blogs.length - 3));
+  const recentBlogs = blogs.slice(0, 3);
+
   return (
     <StyledDiv px="100px">
       <Nav active="home" />
@@ -31,7 +25,7 @@ export const HomePage = () => {
       <StyledDiv width="57px">
         <PageButton displayName="Blog" route="blog" isActive={false} />
       </StyledDiv>
-      <BlogView blogs={recentBlogs} width="410px"/>
+      <BlogView blogs={recentBlogs} width="410px" />
       <Footer />
     </StyledDiv>
   );
