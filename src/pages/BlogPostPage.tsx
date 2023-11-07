@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 
@@ -15,6 +17,14 @@ import blogs from '../data/Blogs.json';
 export const BlogPostPage = () => {
   const { t } = useTranslation();
 
+  const [isTinyWindow, setIsTinyWindow] = useState(window.innerWidth < 965);
+  const [isSmallWindow, setIsSmallWindow] = useState(window.innerWidth < 1150);
+  const checkIsSmallWindow = () => {
+    setIsTinyWindow(window.innerWidth < 965);
+    setIsSmallWindow(window.innerWidth < 1150);
+  };
+  window.onresize = checkIsSmallWindow;
+
   const { id } = useParams();
   const blogPost = blogs.find((blogPost) => blogPost.id === id);
 
@@ -23,10 +33,10 @@ export const BlogPostPage = () => {
   }
 
   return (
-    <StyledDiv px="100px">
-      <Nav active="blog" isTinyWindow={false} />
+    <StyledDiv px={isSmallWindow ? "10px" : "100px"}>
+      <Nav active="blog" isTinyWindow={isTinyWindow} />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
-        <StyledDiv width="60%">
+        <StyledDiv width={isTinyWindow ? "100%" : "60%"}>
           <StyledText variant="blogPostTitle">{blogPost.title}</StyledText>
           <br />
           <img
@@ -52,7 +62,7 @@ export const BlogPostPage = () => {
             </>
           ))}
         </StyledDiv>
-        <EventDetails />
+        {!isTinyWindow && <EventDetails />}
       </StyledDiv>
       <Footer />
     </StyledDiv>

@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { useTranslation } from "react-i18next";
 import { styled } from "styled-components";
 
@@ -13,11 +15,19 @@ const LineBreak = styled.div`
 export const Persevere2022Page = () => {
   const { t } = useTranslation();
 
+  const [isTinyWindow, setIsTinyWindow] = useState(window.innerWidth < 965);
+  const [isSmallWindow, setIsSmallWindow] = useState(window.innerWidth < 1150);
+  const checkIsSmallWindow = () => {
+    setIsTinyWindow(window.innerWidth < 965);
+    setIsSmallWindow(window.innerWidth < 1150);
+  };
+  window.onresize = checkIsSmallWindow;
+
   return (
-    <StyledDiv px="100px">
-      <Nav active="persevere-2022" isTinyWindow={false} />
+    <StyledDiv px={isSmallWindow ? "10px" : "100px"}>
+      <Nav active="persevere-2022" isTinyWindow={isTinyWindow} />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
-        <StyledDiv width="60%">
+        <StyledDiv width={isTinyWindow ? "100%" : "60%"}>
           <StyledText variant="paragraphMedium">
             {t("persevere2022.openingWords")}
           </StyledText>
@@ -36,7 +46,7 @@ export const Persevere2022Page = () => {
             </StyledDiv>
           ))}
         </StyledDiv>
-        <EventDetails />
+        {!isTinyWindow && <EventDetails />}
       </StyledDiv>
       <Footer />
     </StyledDiv>

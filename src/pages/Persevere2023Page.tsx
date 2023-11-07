@@ -1,16 +1,12 @@
-import { useTranslation } from 'react-i18next';
-import { styled } from 'styled-components';
+import { useState } from "react";
 
-import {
-  Footer,
-  Nav,
-} from '../components';
-import {
-  StyledDiv,
-  StyledText,
-} from '../components/common';
-import { EventDetails } from '../components/EventDetails';
-import artists from '../data/artists/2023.json';
+import { useTranslation } from "react-i18next";
+import { styled } from "styled-components";
+
+import { Footer, Nav } from "../components";
+import { StyledDiv, StyledText } from "../components/common";
+import { EventDetails } from "../components/EventDetails";
+import artists from "../data/artists/2023.json";
 
 const LineBreak = styled.div`
   height: 20px;
@@ -19,11 +15,19 @@ const LineBreak = styled.div`
 export const Persevere2023Page = () => {
   const { t } = useTranslation();
 
+  const [isTinyWindow, setIsTinyWindow] = useState(window.innerWidth < 965);
+  const [isSmallWindow, setIsSmallWindow] = useState(window.innerWidth < 1150);
+  const checkIsSmallWindow = () => {
+    setIsTinyWindow(window.innerWidth < 965);
+    setIsSmallWindow(window.innerWidth < 1150);
+  };
+  window.onresize = checkIsSmallWindow;
+
   return (
-    <StyledDiv px="100px">
-      <Nav active="persevere-2023" isTinyWindow={false} />
+    <StyledDiv px={isSmallWindow ? "10px" : "100px"}>
+      <Nav active="persevere-2023" isTinyWindow={isTinyWindow} />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
-        <StyledDiv width="60%">
+        <StyledDiv width={isTinyWindow ? "100%" : "60%"}>
           <StyledText variant="paragraphMedium">
             {t("persevere2022.readMore")}
           </StyledText>
@@ -38,7 +42,7 @@ export const Persevere2023Page = () => {
             </StyledDiv>
           ))}
         </StyledDiv>
-        <EventDetails />
+        {!isTinyWindow && <EventDetails />}
       </StyledDiv>
       <Footer />
     </StyledDiv>
