@@ -1,14 +1,8 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-import {
-  Footer,
-  Nav,
-} from '../components';
-import {
-  StyledDiv,
-  StyledText,
-} from '../components/common';
-import { EventDetails } from '../components/EventDetails';
+import { Footer, Nav } from "../components";
+import { StyledDiv, StyledText } from "../components/common";
+import { EventDetails } from "../components/EventDetails";
 
 export const AboutPage = () => {
   const { t } = useTranslation();
@@ -22,7 +16,7 @@ export const AboutPage = () => {
       justifyContent="space-between"
     >
       <div>
-        <Nav active="about" />
+        <Nav active="about" isTinyWindow={false} />
         <StyledDiv display="flex" justifyContent="space-between" mb="100px">
           <StyledDiv width="60%">
             <StyledText variant="paragraphMedium">

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 /* eslint-disable @typescript-eslint/indent */
 import {
   color,
@@ -11,10 +11,11 @@ import {
   type SpaceProps,
   typography,
   type TypographyProps,
-} from "styled-system";
+} from 'styled-system';
 
 export type TextVariant =
   | "title"
+  | "titleSmall"
   | "navItem"
   | "paragraphMedium"
   | "artistName"
@@ -44,6 +45,12 @@ export const StyledText = styled.text<StyledTextProps>`
         return css`
           font-family: "Times New Roman", Times, serif;
           font-size: 45px;
+          color: black;
+        `;
+      case "titleSmall":
+        return css`
+          font-family: "Times New Roman", Times, serif;
+          font-size: 35px;
           color: black;
         `;
       case "navItem":

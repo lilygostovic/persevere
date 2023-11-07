@@ -1,10 +1,16 @@
-import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 
-import { Footer, Nav } from "../components";
-import { StyledDiv, StyledText } from "../components/common";
-import { EventDetails } from "../components/EventDetails";
-import blogs from "../data/Blogs.json";
+import {
+  Footer,
+  Nav,
+} from '../components';
+import {
+  StyledDiv,
+  StyledText,
+} from '../components/common';
+import { EventDetails } from '../components/EventDetails';
+import blogs from '../data/Blogs.json';
 
 export const BlogPostPage = () => {
   const { t } = useTranslation();
@@ -18,7 +24,7 @@ export const BlogPostPage = () => {
 
   return (
     <StyledDiv px="100px">
-      <Nav active="blog" />
+      <Nav active="blog" isTinyWindow={false} />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
         <StyledDiv width="60%">
           <StyledText variant="blogPostTitle">{blogPost.title}</StyledText>

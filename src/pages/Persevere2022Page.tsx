@@ -1,16 +1,10 @@
-import { useTranslation } from 'react-i18next';
-import { styled } from 'styled-components';
+import { useTranslation } from "react-i18next";
+import { styled } from "styled-components";
 
-import {
-  Footer,
-  Nav,
-} from '../components';
-import {
-  StyledDiv,
-  StyledText,
-} from '../components/common';
-import { EventDetails } from '../components/EventDetails';
-import artists from '../data/artists/2022.json';
+import { Footer, Nav } from "../components";
+import { StyledDiv, StyledText } from "../components/common";
+import { EventDetails } from "../components/EventDetails";
+import artists from "../data/artists/2022.json";
 
 const LineBreak = styled.div`
   height: 20px;
@@ -21,7 +15,7 @@ export const Persevere2022Page = () => {
 
   return (
     <StyledDiv px="100px">
-      <Nav active="persevere-2022" />
+      <Nav active="persevere-2022" isTinyWindow={false} />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
         <StyledDiv width="60%">
           <StyledText variant="paragraphMedium">
