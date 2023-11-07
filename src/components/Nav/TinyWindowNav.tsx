@@ -1,6 +1,9 @@
+import { useState } from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
+import { links } from '../../data/Links';
 import { Pages } from '../../types/Pages';
 import {
   StyledDiv,
@@ -13,6 +16,12 @@ type TinyWindowNavProps = {
 
 export const TinyWindowNav = ({ active }: TinyWindowNavProps) => {
   const { t } = useTranslation();
+
+  const [showNav, setShowNav] = useState(false);
+
+  const toggleShowNav = () => {
+    setShowNav(!showNav);
+  };
 
   return (
     <>
@@ -31,14 +40,58 @@ export const TinyWindowNav = ({ active }: TinyWindowNavProps) => {
         >
           <StyledText variant="titleSmall">{t("title")}</StyledText>
         </Link>
-        <Menu />
+        <Menu toggleShowNav={toggleShowNav} />
       </StyledDiv>
-      <StyledDiv height="2px" width="100%" bg="black" mb="30px" />
+      <StyledDiv
+        height="2px"
+        width="100%"
+        bg="black"
+        mb={showNav ? "0px" : "30px"}
+      />
+      {showNav && (
+        <StyledDiv width="100%" height="200px" mb="50px">
+          {links.map((link) =>
+            link.openInNewWindow ? (
+              <>
+                <a
+                  href={`${link.route}`}
+                  rel="noreferrer"
+                  target="_blank"
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  <StyledText variant="navItem">{link.displayName}</StyledText>
+                </a>
+                <StyledDiv height="2px" width="100%" bg="black" />
+              </>
+            ) : (
+              <>
+                <Link
+                  to={`/${link.route}`}
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  <StyledText variant="navItem">{link.displayName}</StyledText>
+                </Link>
+                <StyledDiv height="2px" width="100%" bg="black" />
+              </>
+            )
+          )}
+        </StyledDiv>
+      )}
     </>
   );
 };
 
-const Menu = () => (
+type MenuProps = {
+  toggleShowNav: () => void;
+};
+
+const Menu = ({ toggleShowNav }: MenuProps) => (
   <StyledDiv
     display="flex"
     flexDirection="column"
@@ -46,9 +99,10 @@ const Menu = () => (
     width="25px"
     height="25px"
     my="5px"
+    onClick={toggleShowNav}
   >
-    <StyledDiv height="3px" width="100%" bg="black" />
-    <StyledDiv height="3px" width="100%" bg="black" />
-    <StyledDiv height="3px" width="100%" bg="black" />
+    <StyledDiv height="2px" width="100%" bg="black" />
+    <StyledDiv height="2px" width="100%" bg="black" />
+    <StyledDiv height="2px" width="100%" bg="black" />
   </StyledDiv>
 );
