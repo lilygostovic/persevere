@@ -1,5 +1,8 @@
-import { Blog } from "../types/Blog";
-import { BlogCover, StyledDiv } from "./common";
+import { Blog } from '../types/Blog';
+import {
+  BlogCover,
+  StyledDiv,
+} from './common';
 
 type BlogViewProps = {
   blogs: Array<Blog>;

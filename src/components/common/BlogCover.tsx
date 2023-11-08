@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { StyledDiv } from './StyledDiv';
-import { StyledText } from './StyledText';
+import { StyledDiv } from "./StyledDiv";
+import { StyledText } from "./StyledText";
 
 type BlogCoverProps = {
   id: string;
@@ -19,7 +19,7 @@ export const BlogCover = ({ id, title, date }: BlogCoverProps) => (
       }}
     >
       <StyledDiv display="flex" flexDirection="column">
-        <StyledDiv width="100%" height="250px">
+        <StyledDiv width="100%">
           <img
             src={require(`../../images/${id}.jpg`)}
             alt="cover"

@@ -8,10 +8,10 @@ import blogs from "../data/Blogs.json";
 
 export const BlogPage = () => {
   const [isTinyWindow, setIsTinyWindow] = useState(window.innerWidth < 965);
-  const [isSmallWindow, setIsSmallWindow] = useState(window.innerWidth < 1150);
+  const [isSmallWindow, setIsSmallWindow] = useState(window.innerWidth < 1270);
   const checkIsSmallWindow = () => {
     setIsTinyWindow(window.innerWidth < 965);
-    setIsSmallWindow(window.innerWidth < 1150);
+    setIsSmallWindow(window.innerWidth < 1270);
   };
   window.onresize = checkIsSmallWindow;
 
@@ -19,8 +19,10 @@ export const BlogPage = () => {
     <StyledDiv px={isSmallWindow ? "10px" : "100px"}>
       <Nav active="blog" isTinyWindow={isTinyWindow} />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
-        <StyledDiv width={isTinyWindow ? "100%" : "60%"}>
-          <BlogView blogs={blogs} centred={true} />
+        <StyledDiv
+          width={isSmallWindow ? (isTinyWindow ? "100%" : "60%") : "68%"}
+        >
+          <BlogView blogs={blogs} width={isSmallWindow ? "100%" : "48%"} />
         </StyledDiv>
         {!isTinyWindow && <EventDetails />}
       </StyledDiv>
@@ -28,3 +30,7 @@ export const BlogPage = () => {
     </StyledDiv>
   );
 };
+
+// tiny -> "100%"
+// small -> "50%"
+// reg -> "68%"
