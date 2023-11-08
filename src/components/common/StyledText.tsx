@@ -84,7 +84,7 @@ export const StyledText = styled.text<StyledTextProps>`
           font-family: "Times New Roman", Times, serif;
           font-size: 20px;
           color: #ababab;
-          line-height: 90px;
+          line-height: 70px;
         `;
       case "blogCoverTitle":
         return css`
