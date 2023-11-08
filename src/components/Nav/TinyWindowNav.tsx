@@ -1,14 +1,11 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
-import { links } from '../../data/Links';
-import { Pages } from '../../types/Pages';
-import {
-  StyledDiv,
-  StyledText,
-} from '../common';
+import { links } from "../../data/Links";
+import { Pages } from "../../types/Pages";
+import { StyledDiv, StyledText } from "../common";
 
 type TinyWindowNavProps = {
   active: Pages;
@@ -62,7 +59,11 @@ export const TinyWindowNav = ({ active }: TinyWindowNavProps) => {
                     color: "black",
                   }}
                 >
-                  <StyledText variant="navItem">{link.displayName}</StyledText>
+                  <>
+                    <StyledText variant="navItem">
+                      {link.displayName}
+                    </StyledText>
+                  </>
                 </a>
                 <StyledDiv height="2px" width="100%" bg="black" />
               </>
@@ -75,7 +76,11 @@ export const TinyWindowNav = ({ active }: TinyWindowNavProps) => {
                     color: "black",
                   }}
                 >
-                  <StyledText variant="navItem">{link.displayName}</StyledText>
+                  <div>
+                    <StyledText variant="navItem">
+                      {link.displayName}
+                    </StyledText>
+                  </div>
                 </Link>
                 <StyledDiv height="2px" width="100%" bg="black" />
               </>
