@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { Footer, Nav } from "../components";
-import { BlogView } from "../components/BlogView";
-import { StyledDiv } from "../components/common";
-import { EventDetails } from "../components/EventDetails";
-import blogs from "../data/Blogs.json";
+import {
+  Footer,
+  Nav,
+} from '../components';
+import { BlogView } from '../components/BlogView';
+import { StyledDiv } from '../components/common';
+import { EventDetails } from '../components/EventDetails';
+import blogs from '../data/Blogs.json';
 
 export const BlogPage = () => {
   const [isTinyWindow, setIsTinyWindow] = useState(window.innerWidth < 965);
@@ -30,7 +33,3 @@ export const BlogPage = () => {
     </StyledDiv>
   );
 };
-
-// tiny -> "100%"
-// small -> "50%"
-// reg -> "68%"

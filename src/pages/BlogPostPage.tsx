@@ -25,6 +25,8 @@ export const BlogPostPage = () => {
   };
   window.onresize = checkIsSmallWindow;
 
+  window.scrollTo(0,0);
+
   const { id } = useParams();
   const blogPost = blogs.find((blogPost) => blogPost.id === id);
 
