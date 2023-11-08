@@ -1,6 +1,6 @@
 # Persevere Website
 
-This project was created using TypeScript and React as a Freelance project for Persevere.
+This project was created using TypeScript and React as a freelance project for Persevere.
 
 ## About Persevere
 
