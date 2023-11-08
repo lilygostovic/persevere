@@ -1,13 +1,16 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-import { StyledDiv, StyledText } from "./common";
+import {
+  StyledDiv,
+  StyledText,
+} from './common';
 
 export const Footer = () => {
   const { t } = useTranslation();
 
   return (
     <div>
-      <StyledDiv height="2px" width="100%" bg="black" mt="150px" />
+      <StyledDiv height="2px" width="100%" bg="black" mt="40px" />
       <StyledDiv display="flex" flexDirection="row">
         <FooterItem
           label={t("instagram.label")}
