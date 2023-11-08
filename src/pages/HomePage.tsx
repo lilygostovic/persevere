@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-import { Footer, Nav } from "../components";
-import { BlogView } from "../components/BlogView";
-import { PageButton, StyledDiv, StyledText } from "../components/common";
-import { EventDetails } from "../components/EventDetails";
-import blogs from "../data/Blogs.json";
+import {
+  Footer,
+  Nav,
+} from '../components';
+import { BlogView } from '../components/BlogView';
+import {
+  PageButton,
+  StyledDiv,
+  StyledText,
+} from '../components/common';
+import { EventDetails } from '../components/EventDetails';
+import blogs from '../data/Blogs.json';
 
 export const HomePage = () => {
   const { t } = useTranslation();
@@ -50,7 +57,7 @@ export const HomePage = () => {
       <BlogView
         blogs={recentBlogs}
         width={isTinyWindow ? "100%" : "33%"}
-        isSmallWindow={isSmallWindow}
+        isSmallWindow={isTinyWindow}
       />
       <Footer />
     </StyledDiv>
