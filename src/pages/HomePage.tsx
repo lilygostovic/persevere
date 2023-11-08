@@ -32,8 +32,8 @@ export const HomePage = () => {
     <StyledDiv px={isSmallWindow ? "10px" : "100px"}>
       <Nav active="home" isTinyWindow={isTinyWindow} />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
-        <StyledDiv width="68%">
-          <StyledDiv width="80%">
+        <StyledDiv width={isTinyWindow ? "100%" : "68%"}>
+          <StyledDiv width={isTinyWindow? "100%": "80%"}>
             <img
               src={require(`../images/home-page-art.jpg`)}
               alt="Recent artwork by our collaborative artists"
@@ -44,7 +44,7 @@ export const HomePage = () => {
             {t("homepage.imageCaption")}
           </StyledText>
         </StyledDiv>
-        <EventDetails />
+        {!isTinyWindow && <EventDetails />}
       </StyledDiv>
       <StyledDiv width="57px">
         <PageButton displayName="Blog" route="blog" isActive={false} />
