@@ -1,19 +1,12 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-import {
-  Footer,
-  Nav,
-} from '../components';
-import { BlogView } from '../components/BlogView';
-import {
-  PageButton,
-  StyledDiv,
-  StyledText,
-} from '../components/common';
-import { EventDetails } from '../components/EventDetails';
-import blogs from '../data/Blogs.json';
+import { Footer, Nav } from "../components";
+import { BlogView } from "../components/BlogView";
+import { PageButton, StyledDiv, StyledText } from "../components/common";
+import { EventDetails } from "../components/EventDetails";
+import blogs from "../data/Blogs.json";
 
 export const HomePage = () => {
   const { t } = useTranslation();
@@ -46,10 +39,19 @@ export const HomePage = () => {
         </StyledDiv>
         {!isTinyWindow && <EventDetails />}
       </StyledDiv>
-      <StyledDiv width="57px">
-        <PageButton displayName="Blog" route="blog" isActive={false} />
+      <StyledDiv width="45px">
+        <PageButton
+          displayName="Blog"
+          route="blog"
+          isActive={false}
+          isFirstItem
+        />
       </StyledDiv>
-      <BlogView blogs={recentBlogs} width={isTinyWindow? "100%" : "33%"} />
+      <BlogView
+        blogs={recentBlogs}
+        width={isTinyWindow ? "100%" : "33%"}
+        isSmallWindow={isSmallWindow}
+      />
       <Footer />
     </StyledDiv>
   );

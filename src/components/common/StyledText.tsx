@@ -16,6 +16,7 @@ import {
 export type TextVariant =
   | "title"
   | "titleSmall"
+  | "header"
   | "navItem"
   | "paragraphMedium"
   | "artistName"
@@ -51,6 +52,12 @@ export const StyledText = styled.text<StyledTextProps>`
         return css`
           font-family: "Times New Roman", Times, serif;
           font-size: 35px;
+          color: black;
+        `;
+      case "header":
+        return css`
+          font-family: Helvetica, sans-serif;
+          font-size: 20px;
           color: black;
         `;
       case "navItem":

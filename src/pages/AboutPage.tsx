@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-import { Footer, Nav } from "../components";
-import { StyledDiv, StyledText } from "../components/common";
-import { EventDetails } from "../components/EventDetails";
+import {
+  Footer,
+  Nav,
+  PageHeader,
+} from '../components';
+import {
+  StyledDiv,
+  StyledText,
+} from '../components/common';
+import { EventDetails } from '../components/EventDetails';
 
 export const AboutPage = () => {
   const { t } = useTranslation();
@@ -27,6 +34,7 @@ export const AboutPage = () => {
     >
       <div>
         <Nav active="about" isTinyWindow={isTinyWindow} />
+        {isTinyWindow && <PageHeader title={t("about.title")} />}
         <StyledDiv display="flex" justifyContent="space-between" mb="100px">
           <StyledDiv width={isTinyWindow ? "100%" : "60%"}>
             <StyledText variant="paragraphMedium">

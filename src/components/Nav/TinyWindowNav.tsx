@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
-import { links } from "../../data/Links";
-import { Pages } from "../../types/Pages";
-import { StyledDiv, StyledText } from "../common";
+import { links } from '../../data/Links';
+import { Pages } from '../../types/Pages';
+import {
+  StyledDiv,
+  StyledText,
+} from '../common';
 
 type TinyWindowNavProps = {
   active: Pages;

@@ -1,16 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { StyledDiv } from "./StyledDiv";
-import { StyledText } from "./StyledText";
+import { StyledDiv } from './StyledDiv';
+import { StyledText } from './StyledText';
 
 type BlogCoverProps = {
   id: string;
   title: string;
   date: string;
+  isSmallWindow: boolean;
 };
 
-export const BlogCover = ({ id, title, date }: BlogCoverProps) => (
-  <StyledDiv m="10px">
+export const BlogCover = ({
+  id,
+  title,
+  date,
+  isSmallWindow,
+}: BlogCoverProps) => (
+  <StyledDiv my="10px" mr={isSmallWindow ? "0px" : "20px"}>
     <Link
       to={`/blog/${id}`}
       style={{
