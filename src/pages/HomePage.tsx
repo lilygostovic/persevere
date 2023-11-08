@@ -33,7 +33,13 @@ export const HomePage = () => {
       <Nav active="home" isTinyWindow={isTinyWindow} />
       <StyledDiv display="flex" justifyContent="space-between" mb="100px">
         <StyledDiv width="68%">
-          <StyledDiv height="500px" width="85%" bg="black" />
+          <StyledDiv width="80%">
+            <img
+              src={require(`../images/home-page-art.jpg`)}
+              alt="Recent artwork by our collaborative artists"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </StyledDiv>
           <StyledText variant="caption">
             {t("homepage.imageCaption")}
           </StyledText>
