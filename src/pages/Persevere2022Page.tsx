@@ -1,19 +1,12 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { useTranslation } from 'react-i18next';
-import { styled } from 'styled-components';
+import { useTranslation } from "react-i18next";
+import { styled } from "styled-components";
 
-import {
-  Footer,
-  Nav,
-  PageHeader,
-} from '../components';
-import {
-  StyledDiv,
-  StyledText,
-} from '../components/common';
-import { EventDetails } from '../components/EventDetails';
-import artists from '../data/artists/2022.json';
+import { Footer, Nav, PageHeader } from "../components";
+import { StyledDiv, StyledText } from "../components/common";
+import { EventDetails } from "../components/EventDetails";
+import artists from "../data/artists/2022.json";
 
 const LineBreak = styled.div`
   height: 20px;
@@ -58,7 +51,18 @@ export const Persevere2022Page = () => {
           <LineBreak />
           {artists.map((artist) => (
             <StyledDiv py="20px">
-              <StyledText variant="artistName">{artist.name}</StyledText>
+              {artist.link !== "" ? (
+                <a
+                  href={artist.link}
+                  rel="noreferrer"
+                  target="_blank"
+                  style={{ textDecoration: "none" }}
+                >
+                  <StyledText variant="artistName">{artist.name}</StyledText>
+                </a>
+              ) : (
+                <StyledText variant="artistName">{artist.name}</StyledText>
+              )}
               <StyledDiv height="10px" />
               <StyledText variant="paragraphMedium">
                 {artist.description}
