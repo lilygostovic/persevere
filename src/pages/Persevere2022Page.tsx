@@ -39,7 +39,19 @@ export const Persevere2022Page = () => {
           <StyledText variant="paragraphMedium">
             {t("persevere2022.openingWords")}
           </StyledText>
-          <LineBreak />
+          <StyledDiv width="100%">
+            <img
+              src={require("../images/persevere-2022.jpg")}
+              height="100%"
+              width="100%"
+              style={{
+                objectFit: "cover",
+                marginTop: "30px",
+                marginBottom: "50px",
+              }}
+              alt=""
+            />
+          </StyledDiv>
           <StyledText variant="paragraphMedium">
             {t("persevere2022.readMore")}
           </StyledText>
