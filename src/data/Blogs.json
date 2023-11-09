@@ -1,5 +1,17 @@
 [
   {
+    "id": "sweater-weather",
+    "title": " Sweater Weather",
+    "date": "07.11.2023",
+    "author": "Christina Lee",
+    "image": "/sweater-weather.jpg",
+    "body": [
+      "As the leaves begin to turn, and the chill of autumn starts to creep in, it's time to embrace sweater weather. This transitional season offers the perfect opportunity to reevaluate our wardrobes and make conscious choices when it comes to fashion. In an era inundated with fast fashion and fleeting trends, cultivating a capsule wardrobe that stands the test of time is an investment in both style and sustainability. It's about choosing quality over quantity and focusing on pieces that are not just for today, but for generations to come.",
+      "The notion of a capsule wardrobe revolves around owning a limited number of timeless, versatile, and high-quality clothing items. By investing in such pieces, we can reduce waste, minimize our carbon footprint, and ensure that our garments are more than just fashion statements; they become future heirlooms. In this journey towards sustainability and sartorial excellence, brands like Paloma Wool, Adrian Cashmere, Extreme Cashmere, and Totême stand out as beacons of quality, craftsmanship, and style. These brands use high-quality materials like cashmere, merino wool, and other natural fibers for their knitwear. Materials that are more durable but also biodegradable, reducing the environmental impact of their products. Furthermore, they believe in narrowing down the options and curating a streamlined wardrobe that transcends trends.",
+      "When we think of heirloom pieces, it's not just about the garment itself but also the stories it accumulates over the years – experiences that become woven into the fabric of the item. In the future, when you pass down your beloved sweater to the next generation, you are not only giving them a piece of clothing but a piece of your history. Sweater weather is the ideal time to reflect on the value of our clothing choices. By cultivating a capsule wardrobe, where each piece is carefully selected for its timeless appeal, we are reminded how true fashion endures far longer than any passing trend."
+    ]
+  },
+  {
     "id": "hunter-schafer-greeces-most-precious-secret",
     "title": "Hunter Schafer: Greece's Most Precious Secret",
     "date": "31.10.2023",
@@ -30,7 +42,7 @@
   },
   {
     "id": "sandy-liang-the-girl-who-gets-it",
-    "title": "Sandy Liang: the girl who gets it.",
+    "title": "Sandy Liang: The girl who gets it",
     "date": "21.10.2023",
     "author": "Christina Lee",
     "image": "/sandy-liang-the-girl-who-gets-it.jpg",
