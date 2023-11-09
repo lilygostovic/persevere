@@ -37,6 +37,18 @@ export const AboutPage = () => {
         {isTinyWindow && <PageHeader title={t("about.title")} />}
         <StyledDiv display="flex" justifyContent="space-between" mb="100px">
           <StyledDiv width={isTinyWindow ? "100%" : "60%"}>
+            <StyledDiv width="100%">
+              <img
+                src={require("../images/about.jpg")}
+                height="100%"
+                width="100%"
+                style={{
+                  objectFit: "cover",
+                  marginBottom: "50px",
+                }}
+                alt=""
+              />
+            </StyledDiv>
             <StyledText variant="paragraphMedium">
               {t("about.paragraph1")}
             </StyledText>
