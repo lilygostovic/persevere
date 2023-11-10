@@ -1,10 +1,38 @@
 [
   {
-    "name": "moderchai",
-    "description": "mordechai is a multimedia project created by Charlie Zacks from Atlanta, Georgia, USA. mordechai is mostly concerned with expression between the digital and physical. mordechai's video content utilizes found footage, home videos, unseen YouTube videos, videos dug up from long-abandoned forums, generative artificial intelligence, and expressive editing to elicit emotional responses unique to the interaction between his art and the viewer. His still-image illustrations mostly consist of provocative statements paired with depictions of catastrophe. His art has been displayed at La MaMa Galleria in New York City, as well as various other galleries and art spaces in NYC, Atlanta, and Montréal. He is a student at McGill University, studying religious studies, with a particular interest in post-modern metaphysics (less pretentious than it sounds). He is also a writer and works as an audio engineer."
+    "name": "ISABEL YONG",
+    "description": "Isabel Yong is a Montreal based artist that has been primarily working with oil paints since 2018. As a third culture kid with a complex and divided family history, her work has explored themes of impermanence, love, identity and the self, reflecting her dynamic external and internal environments. Her recent work has veered more towards themes of love – including queerness, interconnectedness, and tragedy – and navigating emotional distance both with others and within oneself. Isabel plans to pursue a career in clinical therapy, with plans to finish her BSc undergraduate and Honours thesis next fall. Although with recent attention she's paid towards her art-making, she also has plans to move back to Europe, potentially exploring a career in fine arts.",
+    "link": "https://www.isabelyong.com",
+    "img": "isabel-yong"
   },
   {
-    "name": "ISABEL YONG",
-    "description": "Isabel Yong is a Montreal based artist that has been primarily working with oil paints since 2018. As a third culture kid with a complex and divided family history, her work has explored themes of impermanence, love, identity and the self, reflecting her dynamic external and internal environments. Her recent work has veered more towards themes of love – including queerness, interconnectedness, and tragedy – and navigating emotional distance both with others and within herself. Isabel plans to pursue a career in clinical therapy, with plans to finish her BSc undergraduate and Honors thesis next fall. Although with recent attention she's paid towards her art-making, she also has plans to move back to Europe, potentially exploring a career in fine arts."
+    "name": "WONG YUET",
+    "description": "Wong Yuet (Jocelyn Wong 黃悦) is a Montreal-based photographer born and raised in Hong Kong. Growing up mainly consuming media from the US, she glamourised the West and rejected her heritage in her youth. After independently moving to Canada at 15 and experiencing a short stint in Amsterdam, she now recognises the value of one's culture, attempting to reclaim hers through street photography. Her use of candids captures people at their most authentic state, documenting seemingly insignificant moments that would otherwise be forgotten in time. Her preference for film photography lies in its necessity to be intentional, as well as its element of surprise that relieves every moment from needing to be perfectly curated. Previously having her hometown as her primary setting, she now feels comfortable expanding her lens beyond her ethnocultural roots. Her diasporic identity is evident in her work, including in the two photographs, part of her collection that records her travels in Europe this past year.",
+    "link": "https://www.instagram.com/wngyuet/",
+    "img": "wong-yuet"
+  },
+  {
+    "name": "KAT BARR",
+    "description": "Kat Barr is a twenty-two year old visual artist living and working in Montreal. Majoring in Painting and Drawing, they graduated with a BFA from Concordia University, and recently attended a residency at the New York Academy of Art. Barr has exhibited in group shows at VAV Gallery, Atelier Gallerie, among others. Their current work is an exploration of identity, space, and texture. Barr's drawing practice is primarily focused on intuitive mark-making; abstract patterning is used to create a sense of space and inner-psyche. In their paintings, Barr often uses a figure to address questions of the work, exploring our realities through an explicitly human lens.",
+    "link": "https://www.katbarr.com",
+    "img": "kat-barr"
+  },
+  {
+    "name": "SARAH O'DRISCOLL",
+    "description": "Sarah O'Driscoll is a student and interdisciplinary artist working predominantly with photography, alternative printmaking, and fibers. Textures, materiality, and form all play a large part in her artistic vision. Her work often explores concepts relating to material feminism, the environment, and climate anxiety. Through the assemblage of images and materials, she constructs alternate realities and utopias with a feminist perspective. In her work, she examines our interconnectedness with the earth and highlights the significance of nurturing the environment.",
+    "link": "https://www.sarahodriscoll.com",
+    "img": "sarah-odriscoll"
+  },
+  {
+    "name": "ROSALIE DESROCHERS",
+    "description": "Rosalie DesRochers is an emerging queer artist from Montreal, currently completing a Fine Arts bachelor at Concordia University (mixed media). Her practice is rooted in visual arts (sculpture, painting, drawing and mixed media), installation, performance and music. The artist's work has been presented in two independent solo exhibitions and collective exhibitions, such as Commun'Art's annual auctions, where she received the Paul Maréchal award. In 2020, DesRochers participated in the residency Créer des Ponts in Montreal where she was offered to perform during the final show and lead different workshops. In 2020, in revolt to the numerous denunciations of sexual violence against women and people from this spectrum, the artist created Pour nos filles, a quilt of fabric pieces collected from survivors. The work is continuously growing thanks to the support of various women's centers. Within the community, the work acts as a symbol of resistance and an invitation to solidarity, to sew together to better fight. Since 2021, DesRochers has been socially involved with various organizations. In parallel, she signs the artistic direction and styling of various musical projects.",
+    "link": "https://rosaliedesrochers.cargo.site",
+    "img": "rosalie-desrochers"
+  },
+  {
+    "name": "mordechai",
+    "description": "mordechai is a multimedia project created by Charlie Zacks from Atlanta, Georgia, USA. mordechai is mostly concerned with expression between the digital and physical. mordechai's video content utilizes found footage, home videos, unseen YouTube videos, videos dug up from long-abandoned forums, generative artificial intelligence, and expressive editing to elicit emotional responses unique to the interaction between his art and the viewer. His still-image illustrations mostly consist of provocative statements paired with depictions of catastrophe. His art has been displayed at La MaMa Galleria in New York City, as well as various other galleries and art spaces in NYC, Atlanta, and Montréal. He is a student at McGill University, studying religious studies, with a particular interest in post-modern metaphysics (less pretentious than it sounds). He is also a writer and works as an audio engineer.",
+    "link": "https://www.852002.xyz",
+    "img": "mordechai"
   }
 ]
