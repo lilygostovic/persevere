@@ -1,4 +1,4 @@
-import { Link } from '../types/Link';
+import { Link } from "../types/Link";
 
 export const links: Array<Link> = [
   {
@@ -9,14 +9,14 @@ export const links: Array<Link> = [
     openInNewWindow: false,
   },
   {
-    displayName: "Persevere 2022",
+    displayName: "Per/severe 2022",
     route: "persevere-2022",
     isFirstItem: false,
     isLastItem: false,
     openInNewWindow: false,
   },
   // {
-  //   displayName: "Persevere 2023",
+  //   displayName: "Per/severe 2023",
   //   route: "persevere-2023",
   //   isFirstItem: false,
   //   isLastItem: false,
