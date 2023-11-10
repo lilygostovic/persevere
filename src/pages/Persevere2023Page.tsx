@@ -44,7 +44,7 @@ export const Persevere2023Page = () => {
                 >
                   <StyledText variant="artistName">{artist.name}</StyledText>
                 </a>
-                <StyledDiv my="10px" display="flex" height="40vh" width="50%">
+                <StyledDiv my="10px" display="flex" width="100%">
                   <img
                     src={require(`../images/artists/2023/${artist.img}.jpg`)}
                     style={{
