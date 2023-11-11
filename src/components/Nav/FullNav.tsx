@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
-import { links } from "../../data/Links";
-import { Pages } from "../../types/Pages";
-import { PageButton, StyledDiv, StyledText } from "../common";
+import { links } from '../../data/Links';
+import { Pages } from '../../types/Pages';
+import {
+  PageButton,
+  StyledDiv,
+  StyledText,
+} from '../common';
 
 const SIDE_WIDTH = "33";
 
@@ -17,9 +21,17 @@ export const FullNav = ({ active }: FullNavProps) => {
   const { t } = useTranslation();
 
   const [isAddressHovered, setIsAddressHovered] = useState(false);
+  const [isInstagramHovered, setIsInstagramHovered] = useState(false);
+  const [isEmailHovered, setIsEmailHovered] = useState(false);
 
   const toggleHoverAddress = () => {
     setIsAddressHovered(!isAddressHovered);
+  };
+  const toggleHoverInstagram = () => {
+    setIsInstagramHovered(!isInstagramHovered);
+  };
+  const toggleHoverEmail = () => {
+    setIsEmailHovered(!isEmailHovered);
   };
 
   return (
@@ -70,30 +82,46 @@ export const FullNav = ({ active }: FullNavProps) => {
               </StyledText>
             </StyledDiv>
           </a>
-          <StyledDiv>
-            <a
-              href={t("instagram.link")}
-              rel="noreferrer"
-              target="_blank"
-              style={{ textDecoration: "none" }}
+          <StyledDiv display="flex">
+            <StyledDiv
+              onMouseEnter={toggleHoverInstagram}
+              onMouseLeave={toggleHoverInstagram}
             >
-              <StyledText
-                variant="paragraphMedium"
-                style={{ paddingRight: `15px` }}
+              <a
+                href={t("instagram.link")}
+                rel="noreferrer"
+                target="_blank"
+                style={{
+                  color: "black",
+                  textDecoration: isInstagramHovered ? "underline" : "none",
+                }}
               >
-                {t("instagram.label")}
-              </StyledText>
-            </a>
-            <a
-              href={t("email.link")}
-              rel="noreferrer"
-              target="_blank"
-              style={{ textDecoration: "none" }}
+                <StyledText
+                  variant="paragraphMedium"
+                  style={{ paddingRight: `15px` }}
+                >
+                  {t("instagram.label")}
+                </StyledText>
+              </a>
+            </StyledDiv>
+            <StyledDiv
+              onMouseEnter={toggleHoverEmail}
+              onMouseLeave={toggleHoverEmail}
             >
-              <StyledText variant="paragraphMedium">
-                {t("email.label")}
-              </StyledText>
-            </a>
+              <a
+                href={t("email.link")}
+                rel="noreferrer"
+                target="_blank"
+                style={{
+                  color: "black",
+                  textDecoration: isEmailHovered ? "underline" : "none",
+                }}
+              >
+                <StyledText variant="paragraphMedium">
+                  {t("email.label")}
+                </StyledText>
+              </a>
+            </StyledDiv>
           </StyledDiv>
         </StyledDiv>
       </StyledDiv>
