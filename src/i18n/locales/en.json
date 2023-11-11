@@ -3,7 +3,8 @@
   "address": {
     "line1": "3487 Boul. Saint-Laurent",
     "line2": "Montréal, QC H2X 2T6",
-    "line3": "Canada"
+    "line3": "Canada",
+    "link": "https://www.google.ca/maps/place/WIP/@45.5132784,-73.5756023,17z/data=!3m1!4b1!4m6!3m5!1s0x4cc91ba18acf93cf:0x51373aafadce88b5!8m2!3d45.5132747!4d-73.5707314!16s%2Fg%2F11gv0tcd6s?entry=ttu"
   },
   "instagram": {
     "label": "Instagram",
